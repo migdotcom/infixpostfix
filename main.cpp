@@ -57,7 +57,20 @@ Type MyStack<Type>::Pop(void)
 
     return input[--top];
 }
-
+bool realOperand(char character);
+bool realOperator(char character);
+bool realOperand(char character){
+    if( character >= '0' && character <='9' || character >= 'A' && character <='Z'||character >= 'a' && character <='z'){
+        return true;
+    }
+    return false;
+}
+bool  realOperator(char character){
+    if( character == '*' && character =='+' || character >= '/' && character <='$'){
+        return true;
+    }
+    return false;
+}
 int main() {
     MyStack<char> infix;
     infix.Push(10);
@@ -65,50 +78,6 @@ int main() {
     infix.Push(2);
     infix.Push('*');
     cout << infix.Pop();
+
     return 0;
 }
-//int main()
-//{
-//    string expression;
-//    int menu_option;
-//    char restart_option;
-//    string trash;
-//
-//    do
-//    {
-//        cout << "Please give an expression: ";
-//        getline(cin, expression);
-//        cout << endl;
-//
-//        cout << "             OPTIONS MENU" << endl;
-//        cout << "----------------------------------------------" << endl;
-//        cout << "    [1] Infix to Postfix Evaulation" << endl;
-//        cout << "    [2] Postfix to Infix Evaulation" << endl;
-//        cout << "    [3] Evaulate Postfix" << endl << endl;
-//
-//        cout << "Your menu option: ";
-//        cin >> menu_option;
-//        cout << endl << endl;
-//
-//        switch (menu_option)
-//        {
-//            case 1:
-//                break;
-//            case 2:
-//                break;
-//            case 3:
-//                break;
-//            default:
-//                cout << "Error: That is not an option." << endl << endl;
-//        }
-//
-//        cout << "Would you like to enter another expression to convert or evaluate (y/n): " << endl;
-//        cin >> restart_option;
-//
-//        cout << endl << endl;
-//        getline(cin, trash);
-//
-//    } while (restart_option == 'y');
-//
-//    return 0;
-//}
