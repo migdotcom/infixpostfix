@@ -11,6 +11,10 @@ iostream
 -
 string
 -
-assert.h
+stdio.h
+-
+stdlib.h
+-
+math.h
 -
 
