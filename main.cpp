@@ -22,6 +22,8 @@ public:
         arr=new Type[stackSize];
         top=0;
 
+
+         
     }
     ~stack(){delete [] arr;}
     int priority(char c)
