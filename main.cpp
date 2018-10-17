@@ -23,7 +23,7 @@ public:
         top=0;
 
 
-         
+
     }
     ~stack(){delete [] arr;}
     int priority(char c)
